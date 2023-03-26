@@ -25,6 +25,13 @@ private fun getSeasons() {
         12,1,2->println("summer");
         else -> println("no seasons")
     }
+    var x:Any =1;
+    when(x) {
+        is Int-> println("$x is an int");
+        is Double -> println("$x is a double");
+        is String -> println("$x is a string");
+        else -> println("$x is none of the above")
+    }
 }
 
 private fun ifStatements() {
