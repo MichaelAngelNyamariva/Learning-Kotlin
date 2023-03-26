@@ -19,9 +19,13 @@ class MainActivity : AppCompatActivity() {
             // your code to perform when the user clicks on the button
             clickCount+=1;
             txtView.text= clickCount.toString();
-            Toast.makeText(this@MainActivity, "Hi Tendai.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@MainActivity, "Hi Tendai.", Toast.LENGTH_SHORT).show();
+            checkFun();
         }
     }
 
+   private fun checkFun() {
+        Toast.makeText(this@MainActivity, "In a function.", Toast.LENGTH_SHORT).show();
+    }
 
 }
