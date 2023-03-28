@@ -9,14 +9,33 @@ fun main() {
     //ifStatements();
     //whileFun();
     //doWhile()
-    forFun();
+    //forFun();
+    //addFun();
+    averageFun();
+}
+private fun averageFun(){
+    var a=1.00;
+    var b=2
+    var c= (a+b)/2;
+    println("The average of the two values $c");
+}
+private fun addFun() {
+    var a = addUp(14, 12);
+    println(a);
 }
 
+fun addUp(a:Int,b:Int):Int {
+    var c= a +b;
+return c;
+}
 private fun forFun() {
     for (i in 0 until 10) {
         println("Alexa")
     }
     for (i in 0 downTo 10) {
+        println("Down val $i")
+    }
+    for (i in 10 downTo 1 step 3) {
         println("Down val $i")
     }
 }
