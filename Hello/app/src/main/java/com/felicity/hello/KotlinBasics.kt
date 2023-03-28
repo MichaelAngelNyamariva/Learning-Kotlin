@@ -4,9 +4,37 @@ fun main() {
    // printStatements();
     //TODO: a new class
     //getAdd();
-    getSeasons()
+    //getSeasons()
     //getComparison();
     //ifStatements();
+    //whileFun();
+    //doWhile()
+    forFun();
+}
+
+private fun forFun() {
+    for (i in 0 until 10) {
+        println("Alexa")
+    }
+    for (i in 0 downTo 10) {
+        println("Down val $i")
+    }
+}
+
+private fun doWhile() {
+    var x = 5
+    do {
+        println("test $x");
+        x -= 1
+    } while (x >= 0)
+}
+
+private fun whileFun() {
+    var i = 100;
+    while (i > 0) {
+        i -= 2
+        println("the value of $i");
+    }
 }
 
 private fun getSeasons() {
@@ -25,10 +53,16 @@ private fun getSeasons() {
         12,1,2->println("summer");
         else -> println("no seasons")
     }
-    var x:Any =1;
-    when(x) {
-        is Int-> println("$x is an int");
+    whenFun()
+
+}
+
+private fun whenFun() {
+    var x: Any = 1;
+    when (x) {
+        is Int -> println("$x is an int");
         is Double -> println("$x is a double");
+        !is Double -> println("$x is a double");
         is String -> println("$x is a string");
         else -> println("$x is none of the above")
     }
