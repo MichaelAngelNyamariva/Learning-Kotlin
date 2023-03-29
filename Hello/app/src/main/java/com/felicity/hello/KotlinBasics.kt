@@ -11,7 +11,13 @@ fun main() {
     //doWhile()
     //forFun();
     //addFun();
-    averageFun();
+    //averageFun();
+    var car= Cars("BMW", "Silver Blue");
+}
+class Cars (carName:String,carColor:String){
+    init{
+        println("The car name is $carName and car color $carColor");
+    }
 }
 private fun averageFun(){
     var a=1.00;
