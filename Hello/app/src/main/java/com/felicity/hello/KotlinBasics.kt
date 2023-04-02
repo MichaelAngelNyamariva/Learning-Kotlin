@@ -12,11 +12,36 @@ fun main() {
     //forFun();
     //addFun();
     //averageFun();
-    var car= Cars("BMW", "Silver Blue");
+    //var car= Cars("BMW", "Silver Blue",80.0);
+    //Cars();
+   // car.stateHobby();
+   // println("The hobby is ${car.hobby}") ;
+   // println("The BMW M series travel at ${car.sped}")
+    var myCar = Car();
+    myCar.carOwner
 }
-class Cars (carName:String,carColor:String){
+ class Car () {
+     lateinit var carOwner: String
+      val myMake="BMW";
+    
+     init {
+         this.carOwner="Tendai";
+     }
+
+ }
+class Cars (carName:String="Lambogini",carColor:String="Yellow"){
     init{
         println("The car name is $carName and car color $carColor");
+    }
+    var  sped:Double?=null
+    constructor(carNam:String,carColr:String, speed:Double)
+            : this(carNam,carColr){
+                this.sped=speed;
+            }
+
+    var hobby:String="writing code"
+    fun stateHobby(){
+        println("My hobby: $hobby and maximum speed $sped");
     }
 }
 private fun averageFun(){
