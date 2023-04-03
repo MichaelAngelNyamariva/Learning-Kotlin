@@ -17,18 +17,16 @@ fun main() {
    // car.stateHobby();
    // println("The hobby is ${car.hobby}") ;
    // println("The BMW M series travel at ${car.sped}")
-    var myCar = Car();
-    myCar.carOwner
-}
- class Car () {
-     lateinit var carOwner: String
-      val myMake="BMW";
-    
-     init {
-         this.carOwner="Tendai";
-     }
+    var air = AirBnB();
+    air.airbnbOwner;
 
- }
+}
+class AirBnB {
+    lateinit var airbnbOwner : String
+init {
+    this.airbnbOwner="tendai";
+}
+}
 class Cars (carName:String="Lambogini",carColor:String="Yellow"){
     init{
         println("The car name is $carName and car color $carColor");
