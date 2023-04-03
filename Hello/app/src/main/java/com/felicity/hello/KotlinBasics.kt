@@ -1,5 +1,5 @@
 package com.felicity.hello
-
+data class AibnbUser(val loginUserId:Int,val userName:String)
 fun main() {
    // printStatements();
     //TODO: a new class
@@ -17,15 +17,62 @@ fun main() {
    // car.stateHobby();
    // println("The hobby is ${car.hobby}") ;
    // println("The BMW M series travel at ${car.sped}")
+    //getAirBnb();
+    var airbData = AibnbUser(1,"Alex")
+    var userAirbn= airbData.userName
+    println("The system user is ${userAirbn}")
+}
+
+private fun getAirBnb() {
     var air = AirBnB();
     air.airbnbOwner;
-
+    println("My type of airbnb is: ${air.airbnbTypes}");
+    air.airbnbTypes = "Super Host";
+    println("My type of airbnb is: ${air.airbnbTypes}")
+    /// air.numberOfRooms=-2;
+    println("the exterior doors are:  ${air.outDoors}")
 }
+
 class AirBnB {
     lateinit var airbnbOwner : String
+    var airbnbTypes: String ="A unique story house"
+    get(){
+        return field.uppercase()
+    }
+    set(value){
+        field = value
+    }
+    var numberOfRooms:Int=30
+    get() {
+        return field
+    }
+    set(value){
+        field = if(value>0){
+            value
+        }else {
+            throw IllegalArgumentException("The value should be greater than zero")
+        }
+    }
+    var outDoors :Int?=0
+    private set
 init {
     this.airbnbOwner="tendai";
+    this.outDoors=5;
 }
+    var rating: Int = 5
+        get() {
+            if (field < 5) {
+                print("Warning: this is a terrible book")
+            }
+            return field
+        }
+        set(value) {
+            field = when {
+                value > 10 -> 10
+                value < 0 -> 0
+                else -> value
+            }
+        }
 }
 class Cars (carName:String="Lambogini",carColor:String="Yellow"){
     init{
