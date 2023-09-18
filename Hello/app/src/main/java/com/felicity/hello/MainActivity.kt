@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
        val btnClickM = findViewById<Button>(R.id.btnClickMe) //Java old coding
+        btnClickM.text="Add Number";
        var txtView= findViewById<TextView>(R.id.txtView) // Java old coding
         // set on-click listener
         var clickCount=0;

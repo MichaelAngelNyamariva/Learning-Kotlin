@@ -52,7 +52,7 @@ fun main() {
         println(i);
     }
     val arrLst:ArrayList<String> = ArrayList<String>(5);
-    val lst: MutableList<String> = mutableListOf<String>()
+    val lst: MutableList<String> = mutableListOf<String>();
         lst.add("Tendai")
         lst.add("Kudzai")
         arrLst.addAll(lst);
