@@ -8,16 +8,30 @@ var x= avg(60.1,7.0);
     println("the average between two numbers $x");
    // nullExample();
  //   elvisOperator();
-   var pers= Person("Tendai","Nyamariva");
+   var pers= Person("Tendai","Nyamariva","23");
     pers.myhobb();
+    var kz=Person("Kudzi","Tendai");
+    kz.hobby="cooking"
+    kz.myhobb();
+    kz.age=12;
+    println("Kudzai age is ${kz.age}");
+    var lateinit = LateInit();
+    lateinit.nam="Alpha";
+    lateinit.nam="test";
 }
 //class Person constructor(name:String,surname:String)
+class LateInit()
+{ //TODO Late Init
+    lateinit var nam:String
+    va
+}
 //Todo class definition
 class Person(name:String,surname:String)
 {
     init{
         println("Name is $name and  surname is $surname");
     }
+    constructor(name:String,surname:String,age:String):this(name,surname)
     //Todo Member variables
     var age:Int ?=null
     var hobby:String="watching movies"
@@ -117,7 +131,7 @@ private fun basics() {
     for (ab in 1..6) {
         println("1 is greater than $ab")
     }
-    var sum = addup(2, 3)
+    var sum = addup(2, 3);
     println("The sum is $sum");
 }
 
