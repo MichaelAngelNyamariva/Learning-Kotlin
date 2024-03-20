@@ -22,8 +22,7 @@ var x= avg(60.1,7.0);
 //class Person constructor(name:String,surname:String)
 class LateInit()
 { //TODO Late Init
-    lateinit var nam:String
-    va
+    lateinit var nam:String;
 }
 //Todo class definition
 class Person(name:String,surname:String)

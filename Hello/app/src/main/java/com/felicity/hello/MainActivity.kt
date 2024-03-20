@@ -14,12 +14,15 @@ class MainActivity : AppCompatActivity() {
         btnClickM.text="Add Number";
        var txtView= findViewById<TextView>(R.id.txtView) // Java old coding
         // set on-click listener
+        var txtViewNew=findViewById<TextView>(R.id.tvOtherResult)
         var clickCount=0;
 
         btnClickM.setOnClickListener {
             // your code to perform when the user clicks on the button
             clickCount+=1;
             txtView.text= clickCount.toString();
+            clickCount*=2;
+            txtViewNew.text= "The new clicks $clickCount";
             Toast.makeText(this@MainActivity, "Hi Tendai.", Toast.LENGTH_SHORT).show();
             checkFun();
         }
